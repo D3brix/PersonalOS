@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>PersonalOS</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <img src="logo.svg" alt="" width="28" height="28">
+      <span>Personal<b>OS</b></span>
+    </div>
+    <nav id="nav">
+      <div class="nav-group">Find</div>
+      <a href="?v=search" data-view="search">Search</a>
+      <a href="?v=browse" data-view="browse">Knowledge</a>
+      <a href="?v=archive" data-view="archive">Archive</a>
+      <div class="nav-group">Work</div>
+      <a href="?v=inbox" data-view="inbox">Inbox <span class="count" id="inbox-count"></span></a>
+      <a href="?v=projects" data-view="projects">Projects</a>
+      <a href="?v=goals" data-view="goals">Goals</a>
+      <div class="nav-group">System</div>
+      <a href="?v=maintenance" data-view="maintenance">Maintenance</a>
+      <a href="?v=health" data-view="health">Health</a>
+      <a href="?v=integrations" data-view="integrations">Integrations</a>
+      <a href="?v=settings" data-view="settings">Settings</a>
+    </nav>
+    <div class="sidebar-foot" id="foot">Local only &middot; no network</div>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <div id="banner" class="banner" hidden></div>
+    <section id="view" aria-live="polite"></section>
+  </main>
+
+  <aside id="reader" class="reader" hidden aria-label="Note reader">
+    <header class="reader-head">
+      <div>
+        <div id="reader-label"></div>
+        <h2 id="reader-title"></h2>
+        <div id="reader-meta" class="muted mono"></div>
+      </div>
+      <button id="reader-close" class="icon-btn" aria-label="Close reader">&times;</button>
+    </header>
+    <article id="reader-body" class="md"></article>
+  </aside>
+</div>
+
+<dialog id="confirm">
+  <form method="dialog">
+    <h3 id="confirm-title"></h3>
+    <p id="confirm-text"></p>
+    <div class="row end">
+      <button value="cancel" class="btn ghost">Cancel</button>
+      <button value="ok" class="btn primary" id="confirm-ok">Continue</button>
+    </div>
+  </form>
+</dialog>
+</body>
+</html>

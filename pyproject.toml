@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personalos"
+dynamic = ["version"]
+description = "A local-first second brain: a Markdown vault, a two-tier memory index, search, maintenance and AI integrations."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+  "Environment :: Console",
+  "Topic :: Office/Business",
+]
+
+[project.scripts]
+personalos = "personalos.cli:main"
+pos = "personalos.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "personalos.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["personalos*"]
+
+[tool.setuptools.package-data]
+personalos = ["templates/**/*", "web/static/*"]

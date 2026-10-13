@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "vault": "D:/Notes/My Obsidian Vault",
+  "data_dir": "C:/PersonalOS/index",
+  "archive_dir": "E:/PersonalOS Archive",
+  "folders": {
+    "inbox": "Inbox",
+    "daily": "Journal",
+    "projects": "Projects",
+    "areas": "Areas",
+    "knowledge": "Knowledge",
+    "people": "People",
+    "skills": "Skills",
+    "systems": "Systems",
+    "resources": "Resources",
+    "archive": "Archive",
+    "raw": "Clippings",
+    "system": "System"
+  },
+  "extra_sources": [
+    {"path": "E:/PersonalOS Archive/long-term", "kind": "archived", "tier": 2, "extensions": [".md", ".txt"]},
+    {"path": "E:/Old University Notes", "kind": "archived", "tier": 2, "extensions": [".md", ".txt"]}
+  ],
+  "search": {"limit": 8},
+  "integrations": {
+    "claude_code": {"enabled": true, "home": "~/.claude"}
+  }
+}
